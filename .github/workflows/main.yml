@@ -7,7 +7,7 @@ on:
 
 jobs:
   Windows:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     timeout-minutes: 20
 
     steps:
@@ -18,15 +18,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
-
-      - name: Remove Google Chrome for Testing
-        run: Remove-Item -Path "C:\Program Files\Google\Chrome" -Force -Recurse
-
-      - name: Install Google Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
+          
       - name: Install dependencies
         run: npm i
 
