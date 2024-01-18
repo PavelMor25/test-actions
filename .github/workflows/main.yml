@@ -22,5 +22,5 @@ jobs:
       - name: install docker
         run: docker pull testcafe/testcafe:2.6.2
           
-      - name: Install dependencies
-        run: docker run -v tests:/tests -it testcafe/testcafe chrome /tests/zz-series-i1756-2034.js
+      - name: run docker
+        run: docker run -v //d/tests:/tests -it testcafe/testcafe chrome:headless /tests/*.js
