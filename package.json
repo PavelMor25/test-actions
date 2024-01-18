@@ -1,0 +1,15 @@
+{
+  "name": "gh-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zz-series-i1756-2034.js",
+  "scripts": {
+    "start": "testcafe chrome ./zz-series-i1756-2034.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^2.6.2"
+  }
+}
