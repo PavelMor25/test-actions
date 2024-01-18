@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  Windows:
+  docker:
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -19,16 +19,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Remove Google Chrome for Testing
-        run: Remove-Item -Path "C:\Program Files\Google\Chrome" -Force -Recurse
-
-      - name: Install Google Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
+      - name: install docker
+        run: docker pull testcafe/testcafe:2.6.2
           
       - name: Install dependencies
-        run: npm i
-
-      - name: Run Tests (Chrome)
-        run: npm start
+        run: docker run -v zz-series-i1756-2034.js:/tests -it testcafe/testcafe ./zz-series-i1756-2034.js
