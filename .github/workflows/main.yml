@@ -16,4 +16,5 @@ jobs:
         with:
           use_api: true
           time_elapsed: 1
+          gh_token: ${{ secrets.ACTIVE_TOKEN }}
           
